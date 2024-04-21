@@ -29,7 +29,7 @@ hf-login:
 	huggingface-cli login --token $(HF) --add-to-git-credential
 
 push-hub:
-	huggingface-cli upload prsh17/CI-CD-ML ./App --repo-type=space --commit-message="Sync App files"
+	huggingface-cli upload prsh17/CI-CD-ML ./app --repo-type=space --commit-message="Sync App files"
 	huggingface-cli upload prsh17/CI-CD-ML ./Model /Model --repo-type=space --commit-message="Sync Model"
 	huggingface-cli upload prsh17/CI-CD-ML ./Results /Metrics --repo-type=space --commit-message="Sync Model"
 
