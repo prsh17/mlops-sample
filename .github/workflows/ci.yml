@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
-  
+
 permissions: write-all
 jobs:
   build:
@@ -23,8 +23,3 @@ jobs:
         env:
           REPO_TOKEN: ${{ secrets.ci_cd_token }}
         run: make eval
-      - name: Update Branch
-        env:
-          NAME: ${{ secrets.USER_NAME }}
-          EMAIL: ${{ secrets.USER_EMAIL }}
-        run: make update-branch USER_NAME=$NAME USER_EMAIL=$EMAIL
